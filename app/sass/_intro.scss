@@ -1,0 +1,40 @@
+.section-intro {
+  padding: 10rem 11rem 5rem 11rem;
+  position: relative;
+
+  @include respond-phone {
+    padding: 5rem 1.6rem 0 1.6rem;
+    text-align: center;
+  }
+}
+
+.intro {
+  &__img-box {
+    max-width: 48rem;
+  }
+  &__img {
+    width: 100%;
+  }
+
+  &__box {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    background-color: white;
+    max-width: 43rem;
+    padding: 6.3rem;
+
+    @include respond-phone {
+      padding: 0;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__text {
+    color: $dark-grey;
+    line-height: 1.6rem;
+    padding: 0 0.8rem;
+  }
+}

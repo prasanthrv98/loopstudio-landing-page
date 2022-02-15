@@ -1,0 +1,68 @@
+.footer {
+  padding: 3rem 11rem;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond-phone {
+    padding: 3rem 3.2rem;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 10rem;
+
+    @include respond-phone {
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+
+    @include respond-phone {
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 0;
+    }
+  }
+
+  &__nav-link {
+    position: relative;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
+
+    @include navLink-hover(40%);
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+
+    @include respond-phone {
+      justify-content: center;
+    }
+  }
+
+  &__icon-box {
+    position: relative;
+    @include navLink-hover(100%);
+  }
+
+  &__text {
+    color: $very-dark-grey;
+  }
+}
